@@ -1,0 +1,355 @@
+Introducao
+Diagnóstico de doencas
+Determinar o diagnóstico de doencas em pacientes depende de
+vários fatores:
+- Entrevista com o paciente;
+- Experiencia do profissional;
+- Tempo;
+- Etc.
+Dentre esses, a experiencia do profissional e o mais
+importante.
+
+O Problema
+Introducao
+Problema em obtencao de diagnóstico correto
+Em condicoes normais e possivel obter, na maioria das vezes,
+um diagnóstico satisfatório, porem em situa¸ c˜ oes adversas isso
+pode se tornar um problema:
+- Inexperiˆ encia do profissional;
+- Regi˜ ao com surto de doen¸ cas;
+- Recursos indisponiveis no momento da entrevista com um
+paciente.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+O Problema
+Introdu¸ c˜ ao
+Solu¸ c˜ oes Atuais
+- Software pago de empresas internacionais;
+- Diagnóstico baseado na experiˆ encia do examinador.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Solu¸ c˜ ao Proposta
+Introdu¸ c˜ ao
+Solu¸ c˜ ao Proposta
+´
+E proposto um sistema especialista, para ser utilizado em
+dispositivos móveis, que realiza o diagnóstico de doen¸ cas a
+partir de informa¸ c˜ oes sobre os sintomas que o paciente
+apresenta durante o atendimento m´ edico.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´isticas
+Defini¸ c˜ ao
+Heur´isticas pode ser definido como estrat´ egias cognitivas que o
+subconsciente utiliza para reformular um problema e
+transformá-lo em um mais simples e fácil de resolver.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´isticas
+Caracter´isticas das heur´isticas:
+- Transforma¸ c˜ ao de uma decis˜ ao complexa em uma mais
+fácil;
+- Decis˜ oes realizadas com base em impress˜ oes superficiais;
+- Acionadas quando trabalha-se com informa¸ c˜ oes
+insuficientes para responder o problema de forma racional.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´isticas
+Principais tipos de heur´isticas:
+- Heur´istica de representatividade;
+- Heur´istica de disponibilidade;
+- Heur´istica de âncora;
+- Heur´istica de simula¸ c˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´istica de representatividade
+Defini¸ c˜ ao
+Realiza inferˆ encias a respeito das chances de algo pertencer a
+uma determinada categoria. Esta inferˆ encia ´ e feita a partir de
+caracter´isticas superficiais.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´istica de disponibilidade
+Defini¸ c˜ ao
+Estima as chances de algo ocorrer ou a frequˆ encia de um evento
+atrav´ es da lembran¸ ca de exemplos que vˆ em à mente adquiridos
+com a experiˆ encia ao longo do tempo.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´istica de âncora
+Defini¸ c˜ ao
+Toma algo de referˆ encia quando n˜ ao há experiˆ encia sobre o
+problema a ser resolvido e faz-se ajustes intuitivos nessa
+referˆ encia com o objetivo de aproximar-se de uma situa¸ c˜ ao que
+se tenha conhecimento.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Heur´isticas
+Fundamenta¸ c˜ ao Teórica
+Heur´istica de simula¸ c˜ ao
+Defini¸ c˜ ao
+Estima as chances de algo acontecer com base na facilidade com
+que imagina-se sua ocorrˆ encia. Quanto mais fácil for imaginar
+essa ocorrˆ encia, mais provável será acreditar em seu
+acontecimento.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Processo de Obten¸ c˜ ao de Diagnóstico M´ edico
+Fundamenta¸ c˜ ao Teórica
+Diagnóstico M´ edico
+Defini¸ c˜ ao
+Processo que consiste em obter informa¸ c˜ oes a respeito da saúde
+de um paciente, dividido em trˆ es etapas: anamnese, exames
+f´isicos e exames laboratoriais complementares.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Processo de Obten¸ c˜ ao de Diagnóstico M´ edico
+Fundamenta¸ c˜ ao Teórica
+Diagnóstico m´ edico
+Cria¸ c˜ ao do diagnóstico m´ edico:
+- Formula¸ c˜ ao de hipóteses;
+- Importância das hipóteses descartadas;
+- Fixa¸ c˜ ao prematura em provável hipótese.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Processo de Obten¸ c˜ ao de Diagnóstico M´ edico
+Fundamenta¸ c˜ ao Teórica
+Diagnóstico m´ edico
+Influˆ encias nas hipóteses m´ edicas:
+- Caracter´isticas pessoais e estilo de prática do m´ edico;
+- Contexto de atua¸ c˜ ao;
+- Incentivo financeiro.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Inteligˆ encia Artificial
+Defini¸ c˜ ao
+Ramo de pesquisa da ciˆ encia da computa¸ c˜ ao que tem como
+objetivo criar mecanismos computacionais que sejam capazes de
+simular o pensamento humano.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Inteligˆ encia Artificial
+Divis˜ ao:
+- Inteligˆ encia artificial fraca;
+- Inteligˆ encia artificial forte.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Inteligˆ encia Artificial
+Aplica¸ c˜ oes:
+- Planejamento automatizado;
+- Sistemas especialistas;
+- Robótica;
+- Reconhecimento de padr˜ oes.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Sistemas Especialistas
+Caracter´isticas dos Sistemas Especialistas:
+- Base de conhecimentos;
+- Motor de inferˆ encia;
+- Dom´inio de aplica¸ c˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Sistemas Especialistas
+Fases de desenvolvimento:
+- Identifica¸ c˜ ao;
+- Conceitua¸ c˜ ao;
+- Formaliza¸ c˜ ao;
+- Implementa¸ c˜ ao;
+- Avalia¸ c˜ ao;
+- Revis˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Sistemas Especialistas
+Vantagens:
+- N˜ ao ´ e influenciado por emo¸ c˜ oes ou outras condi¸ c˜ oes
+adversas;
+- Velocidade na classifica¸ c˜ ao de problemas;
+- Redu¸ c˜ ao de custos com funcionários;
+- Sem perdas no conhecimento adquirido ao longo do tempo;
+- Integra¸ c˜ ao com outras ferramentas.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Inteligˆ encia Artificial
+Fundamenta¸ c˜ ao Teórica
+Sistemas Especialistas
+Desvantagens:
+- N˜ ao conseguem classificar problemas mais gen´ ericos;
+- Podem gerar inseguran¸ ca com outros funcionários que
+atuam na mesma área de conhecimento do sistema;
+- N˜ ao possuem senso comum, podendo fornecer resultados
+que impactem negativamente algu´ em.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Naive Bayes
+Fundamenta¸ c˜ ao Teórica
+Naive Bayes
+Defini¸ c˜ ao
+T´ ecnica de classifica¸ c˜ ao, baseado em probabilidades e inspirado
+no teorema de Bayes, utilizada para prever uma classe de um
+determinado conjunto de dados.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Naive Bayes
+Fundamenta¸ c˜ ao Teórica
+Teorema de Bayes
+P(A|B) = P(B|A) * P(A) / P(B)
+
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Naive Bayes
+Fundamenta¸ c˜ ao Teórica
+Algoritmo
+Funcionamento
+Consiste em criar uma tabela de frequˆ encia, baseado nas
+amostras dispon´iveis em sua base de conhecimentos, contendo a
+quantidade de ocorrˆ encias dos eventos associados às suas causas.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Naive Bayes
+Fundamenta¸ c˜ ao Teórica
+Algoritmo
+Vantagens:
+- Fácil implementa¸ c˜ ao;
+- Facilidade e velocidade em prever um novo conjunto de
+dados apresentados;
+- Necessário poucos exemplos no conjunto de treino para
+obter classifica¸ c˜ ao com boa acurácia;
+- Quando há independˆ encia nos atributos, seu desempenho ´ e
+superior a outros modelos de classifica¸ c˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Naive Bayes
+Fundamenta¸ c˜ ao Teórica
+Algoritmo
+Desvantagens:
+- Impossibilidade de classifica¸ c˜ ao, caso a amostra submetida
+possua uma caracter´istica n˜ ao observada no treinamento;
+- Desempenho menor quando há forte dependˆ encia nos
+atributos.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Metodologia
+Metodologia
+1 Treinamento;
+2 Execu¸ c˜ ao;
+3 Avalia¸ c˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Metodologia
+Metodologia
+Figura: Fluxograma de funcionamento geral do sistema.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Ferramentas Utilizadas
+Ferramentas
+- Kit de desenvolvimento para aplica¸ c˜ oes Java, vers˜ ao 8.0
+(JDK 8.0);
+- Ambiente de execu¸ c˜ ao para aplica¸ c˜ oes Java, vers˜ ao 8.0
+(JRE 8.0);
+- Ambiente integrado de desenvolvimento: Android Studio
+3.0;
+- Dispositivo móvel com sistema operacional Android, vers˜ ao
+6.0.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Treinamento
+1 Realiza consulta nos registros da base de conhecimentos;
+2 Usa as informa¸ c˜ oes obtidas para criar uma tabela de
+frequˆ encia;
+3 Armazena tabela no banco de dados para usos futuros.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Treinamento
+Figura: Modelagem do banco de dados offline do sistema.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Treinamento
+Figura: Modelagem do banco de dados online do sistema.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Treinamento
+Amostras: 15 Sintoma A (POS): 7 Sintoma A (NEG): 9 Sintoma B (POS): 7 Sintoma B (NEG): 9
+Chikungunya: 5 1 4 3 2
+Dengue: 8 5 3 1 7
+Zika: 3 1 2 3 0
+Tabela: Exemplo de tabela de frequˆ encia criada contendo apenas 2
+sintomas.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Execu¸ c˜ ao
+1 Sele¸ c˜ ao de sintomas identificados durante atendimento;
+2 Inicio do processo de classifica¸ c˜ ao;
+3 Execu¸ c˜ ao do algoritmo Naive Bayes.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Execu¸ c˜ ao
+Figura: Tela do sistema de sele¸ c˜ ao de sintomas.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Execu¸ c˜ ao
+equation: Equacao para cálculo das probabilidades:
+
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Avalia¸ c˜ ao
+1 Resultados da classifica¸ c˜ ao;
+2 Avalia¸ c˜ ao do resultado.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Avalia¸ c˜ ao
+Figura: Tela de resultados da classifica¸ c˜ ao.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Detalhamento do Sistema
+Avalia¸ c˜ ao
+Figura: Tela de amostras com avalia¸ c˜ ao pendente.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Aquisi¸ c˜ ao de Exemplos
+Aquisi¸ c˜ ao de Exemplos
+- Coleta de dados fornecidos por voluntários por meio de
+formulário online durante o per´iodo de 29 de Junho à 09 de
+Julho;
+- Os dados inclu´iam qual doen¸ ca eles já haviam tido e quais
+sintomas apresentaram;
+- 41 pessoas responderam o formulário.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Aquisi¸ c˜ ao de Exemplos
+Aquisi¸ c˜ ao de Exemplos
+Figura: Dados coletados por voluntários.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Testes
+Testes e Resultados
+Testes
+- Separa¸ c˜ ao de base para o processo de inferˆ encia: 31 para
+treino, 9 para teste.
+- Testes realizados com outros algoritmos para fins de análise
+e compara¸ c˜ ao.
+
+Testes
+Testes e Resultados
+Testes
+
+Tabela: Resultados obtidos usando o algoritmo Naive Bayes.
+Tabela: Resultados obtidos usando o algoritmo de indu¸ c˜ ao baseado
+em regras.
+Tabela: Resultados obtidos usando o algoritmo de árvore de decis˜ ao.
+Tabela: Tabela de compara¸ c˜ ao de resultados.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Resultados
+Testes e Resultados
+Tempo de Execu¸ c˜ ao
+- Fase de treinamento: 4 à 6 segundos;
+- Fase de execu¸ c˜ ao: 2 à 3 segundos.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Resultados
+Testes e Resultados
+Conclus˜ oes
+- Abordagem conveniente e acess´ivel;
+- Resultados bons considerando o reduzido número de
+amostras na base de conhecimentos;
+- Alternativa barata e simplificada;
+- Metodologia promissora.
+Introdu¸ c˜ ao Fundamenta¸ c˜ ao Teórica Sistema Proposto Testes e Resultados Trabalhos Futuros Perguntas
+Novas ideias e melhoramentos
+Trabalhos Futuros
+Novas ideias e melhoramentos
+- Aperfei¸ coar o classificador do sistema;
+- Integra¸ c˜ ao com prontuários m´ edicos;
+- Estender as áreas de aplica¸ c˜ ao do sistema;
+- Adquirir mais exemplos para treinamento.

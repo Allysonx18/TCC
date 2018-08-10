@@ -1,0 +1,734 @@
+O objetivo deste trabalho é apresentar um sistema especialista (SE) desenvolvido
+para dispositivos móveis, a ser utilizado por profissionais da área de saúde, para auxílio no
+diagnóstico de enfermidades. O sistema usará informações sobre os sintomas do paciente,
+previamente identificados pelo médico, e técnicas de Inteligência Artificial (IA) para
+realizar os diagnósticos. Espera-se que seu uso resulte na diminuição da taxa de erros de
+diagnósticos em hospitais do país.
+1.1 Motivação e Caracterização do Problema
+Atualmente existe uma quantidade muito grande de doenças espalhadas por todo
+o globo terrestre, desde doenças hereditárias e congênitas à doenças comuns adquiridas
+no convívio social. Com o surgimento da medicina moderna no século XV, a humanidade
+adotou um método padrão para identificação de doenças e posterior tratamento das
+mesmas.
+Este método ficou conhecido como diagnóstico médico, que basicamente é o processo
+de entrevistar o doente a respeito dos sintomas manifestados pelo mesmo, a fim de descobrir
+que tipo de enfermidade o assola. Desde então, a medicina só avançou, agregando cada
+vez mais conhecimentos científicos aliados à tecnologia, a fim de melhorar esse processo de
+identificação de doenças para reduzir a taxa de mortalidade das pessoas.
+Apesar de todos os avanços conseguidos ao longo do tempo, infelizmente no Brasil
+os casos de diagnósticos médicos realizados erroneamente aumentaram abruptamente nos
+últimos anos [ 1 ]. Muitos desses erros estão frequentemente atrelados à inexperiência do
+avaliador ou as condições e circunstâncias adversas de um determinado lugar que podem
+induzir o profissional ao erro.
+Na medicina há um termo chamado “falso positivo”, o mesmo se refere a casos em
+que um paciente é diagnosticado com uma doença, quando na verdade o mesmo não a
+possui [ 2 ]. Além dos casos de falsos positivos existentes no domínio da saúde, há também
+os casos onde uma pessoa é diagnosticada com uma enfermidade diferente da que possui.
+Em ambos os casos, pode-se provocar um tratamento equivocado que pode resultar em
+consequências graves para o paciente.
+No Brasil esses problemas são amplificados devido às condições precárias, e as
+vezes desumanas, dos estabelecimentos de saúde no qual muitos pacientes são internados e
+tratados. Parte desses problemas poderiam ser reduzidos se houvesse, e fosse amplamente
+utilizado, um SE com domínio na área de saúde capaz de auxiliar os profissionais nesses
+Capítulo 1. Introdução 15
+diagnósticos. Sistemas especialistas são sistemas que utilizam técnicas de inteligência
+artificial (IA), desenvolvidos por engenheiros de software com auxílio de um profissional
+especialista em uma área de atuação, capazes de analisar uma grande quantidade de
+informações utilizando recursos computacionais para fornecer uma solução para o problema
+que está sendo tratado [3].
+Apesar dos benefícios desses sistemas, é muito raro vê-los sendo utilizados de
+maneira rotineira na prática em redes hospitalares do país. Parte disso deve-se ao fato
+de que o sistema depende de recursos computacionais que nem sempre se dispõe em
+alguns hospitais. Uma alternativa a esse problema seria o planejamento e desenvolvimento
+de um SE que funcione de forma independente em dispositivos móveis, já que o uso de
+smartphone’s têm aumentado significativamente nos últimos anos [ 4 ]. Além da conveniência
+e facilidade de usar um smartphone, é fato que alguns utilizados diariamente por muitos
+usuários já possuem recursos superiores há muitos computadores pessoais disponíveis no
+mercado.
+Apenas no Brasil, já são mais de 70 milhões de pessoas a possuírem smartphone’s
+para realizar diversos tipos de atividades [ 5 ]. As pessoas estão praticamente o tempo
+inteiro utilizando seu dispositivo para alguma coisa, seja para verificar sua localização em
+um lugar ou consultar seu perfil em redes sociais. Aproveitando-se disso, muitas empresas
+já estão explorando o potencial desse novo recurso criando aplicativos responsáveis pela
+comunicação direta com elas e permitindo a resolução de problemas com uma maior
+facilidade [4].
+1.2 Objetivo Geral
+Este trabalho de conclusão de curso tem como principal objetivo o desenvolvimento
+de um sistema especialista com domínio na área médica, que possa ser utilizado por
+profissionais, experientes ou não, para auxiliar em diagnósticos médicos de pacientes que
+apresentem sintomas de doenças provenientes do mosquito Aedes Aegypti. O sistema funci-
+onará em dispositivos móveis devido à facilidade e conveniência de utilizá-lo diariamente e
+contará com técnicas de inteligência artificial.
+1.3 Objetivos Específicos
+• Estudo dos elementos necessários para concepção do diagnóstico médico;
+• Estudo dos algoritmos de inteligência artificial para verificar qual se aplica melhor
+ao problema;
+Capítulo 1. Introdução 16
+• Desenvolvimento de um sistema especialista voltado para dispositivos móveis que
+seja capaz de realizar o diagnóstico médico de forma satisfatória;
+• Avaliação e revisão do sistema para verificar sua acurácia e possíveis problemas
+durante sua utilização.
+1.4 Estrutura do Documento
+Este documento está dividido em 6 capítulos. O Capítulo 1 refere-se à introdução ao
+assunto e apresentação dos aspectos do problema a ser resolvido, assim como os objetivos
+do trabalho. No Capítulo 2 são apresentados as fundamentações teóricas, explicando o
+que são heurísticas e sua importância, como é realizado o processo de identificação de
+enfermidades por parte de um médico, o que é inteligência artificial e por fim apresentando
+a teoria por trás do algoritmo de classificação utilizado no trabalho.
+No Capítulo 3 são descritos os processos realizados durante o desenvolvimento
+deste trabalho, bem como as especificações necessárias para sua replicação e o ambiente
+onde a aplicação foi implementada. No Capítulo 4 são apresentados os testes realizados no
+trabalho e os resultados obtidos. No Capítulo 5 são apresentados as conclusões sobre o que
+foi produzido. No Capítulo 6 são apresentados os trabalhos futuros que pode-se realizar a
+partir do que foi construído.
+17
+2 Fundamentação Teórica
+Este capítulo descreve as fundamentações teóricas que dão o embasamento ne-
+cessário para concepção da abordagem proposta. A seção 2.1 apresenta os conceitos e
+importância das heurísticas, enquanto na seção 2.2 são explicados os processos realizados
+para a criação de um diagnóstico médico. A seção 2.3 detalha o que é inteligência artificial
+e suas aplicações no mundo real e na seção 2.4 é descrito o funcionamento do algoritmo
+utilizado no desenvolvimento do sistema especialista objetivado nesse trabalho.
+2.1 Heurísticas
+Os seres vivos inteligentes são famosos por tomarem centenas de decisões diárias
+importantes durante suas vidas, sejam elas desde as mais simples, como o que comer
+ou beber, até as mais complexas como em quem votar nas eleições presidenciais. Todas
+essas decisões, por mais simples que pareçam ser, podem resultar em uma consequência
+inevitável se não bem conduzida, principalmente quando o ser vivo em questão é o ser
+humano. A decisão de cada pessoa na sociedade é multiplicada por um conjunto de fatores
+aleatórios ocorrendo no momento da decisão, que podem, no fim de um ciclo (dia, mês ou
+ano) resultar em uma decisão boa ou ruim.
+Há muitas decisões a serem feitas e nem todas são fáceis de fazer, isto porque a
+decisão de uma única pessoa, seja essa decisão boa ou ruim, pode afetar de maneira positiva
+ou negativa a vida de várias outras pessoas. No entanto, é possível resolver decisões muito
+importantes de forma mais fácil do que espera-se. Isto é possível porque a mente dos seres
+vivos utiliza atalhos mentais chamados heurísticas.
+Heurísticas são estratégias cognitivas que o subconsciente de um ser vivo utiliza
+para reformular um problema e transformá-lo em um mais simples e fácil de resolver, ou
+seja, é basicamente um artifício que a mente utiliza para tornar mais fácil o processo de
+tomada de decisões [6].
+Explicando melhor, ao considerar a seguinte questão, “Qual curso escolher na
+hora de prestar um vestibular?”, muitas pessoas simplesmente não conseguem tomar uma
+decisão, isto é muito comum dado que esta é uma questão complexa de se resolver e que
+exige uma profunda pesquisa sobre o assunto e reflexão sobre as vantagens e dificuldades de
+cada curso. Nesse momento as heurísticas na mente são acionadas e começam a trabalhar
+de forma automática, sem o consentimento e conhecimento da pessoa. Em vez de responder
+à questão “Que curso fazer?”, as heurísticas “quebram” a questão e a transforma em
+“Quais cursos oferecem melhores oportunidades profissionais após a formação?”
+Capítulo 2. Fundamentação Teórica 18
+Apesar de a segunda questão ser bastante diferente da questão original, ambas
+possuem relação e a resposta para a segunda questão é dada como resposta automática para
+a questão original. Nota-se agora que a segunda questão está atrelada a um grupo genérico
+baseado em impressões superficiais que permite uma maior facilidade para avaliação. Essa
+estratégia é um atalho usado quando é muito difícil atender a todos os problemas a serem
+resolvidos utilizando a estratégia racional, e prosseguir ou não com esse raciocínio é um
+problema que a mente consciente simplesmente decide não processar.
+O problema dessas heurísticas é que elas são acionadas justamente quando trabalha-
+se com questões onde não há dados suficientes para responder à questão de forma racional,
+o que pode acarretar algumas vezes em respostas pouco precisas e que podem induzir
+uma pessoa a um erro. Sabendo o que são heurísticas fica evidente sua importância,
+principalmente na área de saúde onde os profissionais lidam o tempo todo com decisões que
+podem mudar a vida de uma pessoa para sempre. As heurísticas também são utilizadas
+em IA, dando base para desenvolvimento de diversos sistemas de classificação e previsão,
+sendo utilizado nesta abordagem como um dos elementos presentes no motor de inferência
+do sistema desenvolvido.
+Dentre os tipos de heurísticas existentes, as usadas com mais frequências são:
+heurística de representatividade, heurística de disponibilidade, heurística de âncora e
+heurística de simulação [7].
+2.1.1 Heurística de representatividade
+Consiste em realizar inferências a respeito das chances de algo pertencer a uma
+determinada categoria. Esta inferência é feita a partir de características superficiais. É
+importante ressaltar que mesmo que haja informação suficiente para realização de uma
+inferência não significa que a mesma seja verdadeira.
+Um exemplo desse tipo de heurística é quando uma pessoa conhece outras duas e
+anteriormente ela possuía a informação de que uma dessas duas trabalha com desenvolvi-
+mento de software. Se uma das pessoas que ela acabou de conhecer estiver vestindo uma
+camisa que seja relacionado a área de tecnologia, esta pessoa pode deduzir que quem está
+com a camisa citada é quem trabalha com desenvolvimento de software.
+2.1.2 Heurística de disponibilidade
+Consiste em estimar as chances de algo ocorrer, a frequência de um evento ou a
+associação entre dois acontecimentos. Essa estimativa é realizada através da lembrança de
+casos que vêm à mente através da experiência adquirida ao longo do tempo. Um exemplo
+desse tipo de heurística é quando alguém pergunta se há mais homens ou mulheres atuando
+na área de desenvolvimento de software. Nesse caso, se a pessoa a responder teve mais
+Capítulo 2. Fundamentação Teórica 19
+contato com mulheres nessa área, então será esta a resposta que ela dará.
+2.1.3 Heurística de âncora
+Consiste em tomar algo de referência quando não há experiência sobre o problema
+a ser resolvido. Nesse caso é tomado um ponto como referência, e em seguida é feito
+ajustes intuitivos nesse ponto para que o mesmo se aproxime de uma situação que se tenha
+conhecimento.
+Um exemplo desse tipo de heurística é quando alguém pergunta a renda média de
+um desenvolvedor de software. Nesse caso, a pessoa a responder pode analisar sua renda
+anual trabalhando como desenvolvedor e avaliar se a mesma está acima ou abaixo da
+média. Em seguida, realiza-se alguns ajustes e infere-se intuitivamente o valor que pode
+ser a renda média de um desenvolvedor de software.
+2.1.4 Heurística de simulação
+Consiste em estimar as chances de algo acontecer com base na facilidade com que
+imagina-se sua ocorrência. Quanto mais fácil for imaginar essa ocorrência, mais provável
+será acreditar em seu acontecimento. Um exemplo desse tipo de heurística é quando em
+um sorteio uma pessoa deixa de ganhar o prêmio pela diferença de um dígito no bilhete
+que possui. Para essa pessoa é fácil imaginar a situação de ter ganho o prêmio se alguma
+coisa tivesse mudado.
+2.2 Processo de Diagnóstico Médico
+2.2.1 O que é diagnóstico médico?
+O diagnóstico médico é uma das principais atividades no cotidiano de um profissional
+da saúde, é por meio dele que se consegue informações a respeito da saúde atual de um
+determinado paciente. Este processo consiste em basicamente três etapas, sendo elas a
+anamnese, os exames físicos e os exames laboratoriais complementares.
+A anamnese consiste em uma entrevista com o paciente a fim de relembrar os
+fatos anteriores ao surgimento da doença, bem como suas possíveis causas. Quando bem
+realizada é responsável por 85% do diagnóstico em clínicas médicas, restando dessa forma
+apenas 10% para os exames físicos e 5% para exames complementares laboratoriais [8].
+Durante a anamnese o profissional responsável recolhe informações como dados de
+identificação do paciente, principal queixa que levou o paciente a procurar um atendimento
+clínico, registros de quando, como e onde a doença se manifestou, histórico do paciente,
+histórico familiar, dentre outras informações.
+Capítulo 2. Fundamentação Teórica 20
+A segunda etapa de extrema importância durante o diagnóstico médico é a semio-
+técnica, que compreende os métodos para identificar os sinais de uma enfermidade durante
+um exame físico. Tais métodos consistem em inspeção do corpo do paciente, palpação,
+auscultação e percussão [9].
+Por fim, a última etapa consiste na realização de exames laboratoriais para auxiliar
+o raciocínio do médico após a obtenção das informações prévias na anamnese e nos exames
+físicos. Após as três etapas terem sido realizadas, é feita uma síntese das informações para
+definir quais possíveis doenças estão acometendo o paciente e posteriormente planejar o
+tratamento baseado no quadro de saúde apresentado.
+Durante a síntese de informações para definir as possíveis doenças que um paciente
+possui, um profissional da saúde normalmente utiliza os conhecimentos médicos obtidos
+durante a formação acadêmica e também sua experiência profissional. Essa síntese de
+informações exige um raciocínio complexo e elaborado, pois é necessário vislumbrar
+centenas de possibilidades para se chegar à conclusão correta.
+No decorrer da seção, será apresentado as metodologias empregadas no processo de
+síntese de informações para obtenção do diagnóstico correto, bem como práticas habituais
+utilizadas por diversos médicos que atuam na área.
+2.2.2 Criação do diagnóstico médico
+Durante a entrevista com o paciente, o profissional utiliza de seu conhecimento
+acadêmico e sua experiência para criar as primeiras hipóteses a serem avaliadas dentro de
+um conjunto de centenas de possibilidades. Cada nova informação obtida a respeito da
+doença permite que o profissional formule novas hipóteses e descarte outras, dessa forma
+direcionando a entrevista para a hipótese mais provável [8].
+O sucesso na formulação do diagnóstico médico depende muito da experiência do
+profissional, isto porque a cada nova evidência informada pelo paciente, o médico adapta
+as perguntas seguintes à hipótese que acredita ser a correta. Dessa forma, ao fim da
+entrevista as etapas de semiotécnica e solicitação de exames complementares também
+estarão diretamente associados à primeira impressão do médico.
+Considerando a importância das primeiras impressões a respeito da enfermidade,
+as hipóteses descartadas são tão importantes quanto as hipóteses aceitas, isto porque uma
+hipótese indevidamente descartada pode acarretar em consequências graves para o paciente.
+Um raciocínio muito comum é o qual alguém não avalia outras possibilidades, fixando-se
+rapidamente em apenas uma hipótese que acredita ser a correta. O profissional analisa o
+quadro geral e enxerga apenas as referências que quer ver, influenciado pelas heurísticas
+de disponibilidade e simulação, acabando por negligenciar informações importantes que
+indicam outras hipóteses.
+Capítulo 2. Fundamentação Teórica 21
+Por exemplo, após um período de tempo atendendo diversos casos de pacientes
+com gripe em uma determinada região, um médico experiente acaba por diagnosticar os
+sintomas de um novo paciente também como gripe, quando na verdade o paciente esta
+infectado com o vírus da dengue que a princípio tem sintomas semelhantes à de uma gripe.
+Um erro que pode levar o paciente a óbito por recomendar medicações contraindicadas.
+2.2.3 Influências nas hipóteses médicas
+No mundo todo, pesquisas são realizadas todos os dias acerca das melhores práticas
+para tomadas de decisões em diagnósticos médicos, esses estudos levaram os pesquisadores
+a associar diagnósticos satisfatórios em três conjuntos diferentes e igualmente importantes,
+sendo eles: o conjunto de características pessoais e estilo de prática do médico, o conjunto
+de contexto de atuação e o conjunto de incentivo financeiro [10].
+Conjunto de características pessoais e estilo de prática do médico
+Nesse conjunto destaca-se a importância do conhecimento, treinamento e experiência
+do profissional da área de saúde. Isto implica que na grande maioria dos casos, profissionais
+que estão atuando há mais tempo na área possuem uma maior probabilidade de prestar
+um auxílio de alta qualidade ao paciente, visto que o profissional em questão estará mais
+familiarizado com as evidências que presencia na área em que atua.
+Nesse caso, como a experiência está diretamente ligada ao sucesso no diagnóstico,
+é de senso comum que profissionais especialistas como cardiologistas possuam mais co-
+nhecimento e mais sucesso em diagnósticos de sua área que um clínico geral, salvo às
+exceções.
+Conjunto de contexto de atuação
+Nesse conjunto destaca-se a importância dos recursos que o profissional dispõe
+no momento do atendimento, isto é, medicações, acessórios médicos, informações sobre
+consultas anteriores. Tudo isso pode afetar na atuação do profissional, visto que durante
+uma consulta o profissional pode precisar utilizar um material específico que acabe por
+não dispôr naquele momento.
+Conjunto de incentivo financeiro
+Nesse conjunto destaca-se a importância na prática de profissionais da saúde.
+Isto porque em alguns casos, a postura de atendimento do profissional da área muda de
+acordo com o tipo de remuneração que o mesmo recebe. Basicamente um profissional
+pode ser remunerado pelo seu empregador por número de atendimentos realizados ou por
+remuneração fixa mensal.
+Capítulo 2. Fundamentação Teórica 22
+No primeiro caso, um maior número de atendimentos realizados no período de um
+mês implica em uma remuneração maior, o que pode acarretar em certo descaso por parte
+do profissional no momento do atendimento, pois geralmente o mesmo tende a realizar
+atendimentos mais rápidos.
+No segundo caso não há esse problema, pois a remuneração ao fim do mês será
+a mesma independente do número de atendimentos que o profissional tenha realizado
+durante esse período, o que faz com que o mesmo dedique um tempo maior no atendimento
+do paciente.
+2.3 Inteligência Artificial
+2.3.1 Histórico e definição
+O termo Inteligência Artificial (IA) refere-se à um ramo de pesquisa da ciência da
+computação que tem como objetivo criar mecanismos computacionais que sejam capazes
+de simular o pensamento humano [ 11 ]. Seu estudo iniciou após a segunda guerra mundial,
+com o artigo "Computing Machinery and Intelligence"do matemático Alan Turing [ 12 ], e
+desde então seu desenvolvimento vem avançando rapidamente.
+Inicialmente a IA objetivava apenas uma forma de simular o raciocínio humano para
+resolver problemas complexos de forma rápida, e dessa forma aumentar a produtividade
+onde quer que fosse aplicada. No entanto, com o passar do tempo os pesquisadores
+enxergaram nesse meio a capacidade de se criar uma tecnologia não só capaz de fazer isso,
+mas de criar algo que pudesse ter emoções, criatividade, consciência e comunicação, assim
+como todos os humanos [11].
+No campo da pesquisa, os cientistas dividem a IA em 2 tipos, sendo elas: IA forte
+e IA fraca [ 13 ]. A IA forte investiga maneiras de criar formas de inteligência capazes de
+possuir autoconsciência, enquanto a IA fraca lida com a criação de métodos para resolução
+de problemas não determinísticos. Uma forma de descobrir se uma tecnologia é de fato
+autoconsciente é realizando o teste de Turing [ 14 ], no qual consiste em colocar um humano
+para ter uma conversa com uma máquina e ao fim da conversa, o mesmo não conseguir
+distinguir se estava falando com outro humano ou não.
+Enquanto o desenvolvimento da IA forte progride lentamente, as técnicas baseadas
+em IA fraca dominam o mercado tecnológico contendo a maior parte das aplicações
+desenvolvidas atualmente. Uma das aplicações frequentemente utilizada é o processamento
+digital de imagens, que consiste em desenvolver algoritmos capazes de manipular imagens
+para melhorar seu aspecto visual e fornecer outros recursos para sua interpretação [ 15 ].
+Outras aplicações de inteligência artificial são: planejamento automatizado, raciocínio
+baseado em casos, jogos, robótica e reconhecimento de padrões.
+Capítulo 2. Fundamentação Teórica 23
+- Planejamento automatizado: Atuam fazendo o processo de escolha e organização de
+ações para alcançar, da melhor forma possível, objetivos pré-definidos [16].
+- Sistemas especialistas: Tem como objetivo resolver problemas adaptando soluções
+observadas em problemas anteriores [17].
+- Diagnósticos: Sistemas de diagnóstico baseados em análise probabilística capazes de
+executar tarefas em um nível equivalente à um profissional especialista em diversas
+áreas. Um exemplo disso é o sistema de diagnóstico de etiologia para dores abdominais
+agudas, desenvolvido na Inglaterra e utilizado amplamente em diversas enfermarias
+de emergência do país. Seu uso reduziu em 50% as taxas de apendicite perfurada e
+em 22% a incidência de cirurgias abdominais desnecessárias [18].
+- Robótica: Englobam o uso de computadores, robôs e computação para desenvol-
+vimento de sistemas compostos por partes mecânicas que podem ser controlados
+manualmente ou automaticamente por circuitos eléctricos. Utilizada atualmente por
+muitas fábricas e indústrias para obter sucesso na redução de custos e aumento de
+produtividade [19].
+- Reconhecimento de padrões: Tem como objetivo a classificação de objetos, dentro de
+uma série de categorias, que podem variar entre imagens, sinais, gestos, caracteres
+ou qualquer outro tipo de categoria que precise ser classificada [20].
+2.3.2 Sistemas especialistas
+Nos anos 70, durante o desenvolvimento de tecnologias que permitissem a resolução
+de problemas recorrentes do mundo real, os pesquisadores de IA notaram que para que isso
+fosse possível era necessário abandonar a estratégia de algoritmizar os problemas de forma
+tradicional e começar a desenvolver formas de representar o funcionamento do pensamento
+humano. Dessa forma, eles chegaram a conclusão que o sucesso para isso ocorrer dependia
+mais do conhecimento sobre o problema do que das regras no algoritmo.
+Com isso surgiram os sistemas especialistas, sistemas inteligentes capazes de fun-
+cionar de forma similar ao raciocínio de um profissional especializado em uma área de
+conhecimento, que tem como objetivo realizar a classificação de problemas de seu domínio
+[ 3 ]. Os mesmos utilizam uma base de conhecimento de regras e fatos, e heurísticas para
+realizar a classificação dos problemas aos quais são submetidos.
+O principal elemento de um SE é o motor de inferência, ele é o responsável por
+realizar o processamento necessário entre a base de conhecimento e as heurísticas para
+resolver o problema. O motor de inferência pode realizar o processamento das heurísticas
+do sistema de duas diferentes formas: progressiva e regressiva.
+Capítulo 2. Fundamentação Teórica 24
+Durante o processamento progressivo, apenas os dados que podem identificar
+o problema são apresentados pelo usuário, a partir daí o sistema busca na base de
+conhecimento os fatos e regras que melhor se encaixam às informações fornecidas. Enquanto
+no processamento regressivo, tanto os dados do problema quanto a resposta para o mesmo
+são fornecidos ao sistema, que por sua vez inicia uma busca para provar se a hipótese
+fornecida é de fato a resposta real para o problema.
+De forma geral, um SE possui um domínio de aplicação muito restrito ao problema
+ao qual foi designado, onde o classificador de seu motor de inferência é baseado em modelos
+estatísticos. Para que um SE seja considerado efetivo, além de classificar corretamente os
+problemas, o mesmo também deve ser capaz de oferecer sugestões e aprender com novos
+exemplos inseridos pelo usuário.
+Fases de desenvolvimento
+O processo de desenvolvimento de um SE é dividido comumente em fases, onde
+cada uma delas deve ser cuidadosamente executada para a criação de um SE eficaz. Essas
+fases podem ser divididas em: identificação, conceituação, formalização, implementação,
+avaliação e revisão.
+Identificação
+Fase responsável pela identificação dos recursos e características do problema,
+bem como os objetivos desejados ao fim do desenvolvimento. Durante a identificação dos
+recursos, deve-se obter a base de conhecimento a ser utilizada no sistema, isto é possível
+consultando um especialista na respectiva área de conhecimento e buscando livros, artigos e
+todo tipo de conteúdo relacionado. Enquanto na identificação das características ressalta-se
+os principais elementos do problema, como quais problemas o sistema resolverá, que tipo
+de situação pode ocorrer no momento da utilização do sistema, quais dados são mais
+importantes para a resolução de um caso, etc. Por fim, a fase de identificação também
+é responsável por identificar os recursos computacionais e financeiros para execução do
+projeto.
+Conceituação
+Nesta fase define-se os principais conceitos e mecanismos necessários para resolução
+do problema. O engenheiro e especialista responsáveis pelo sistema decidem quais conceitos
+são mais adequados para que o sistema consiga atingir melhores resultados durante sua
+execução.
+Capítulo 2. Fundamentação Teórica 25
+Formalização
+Fase responsável por transformar os conceitos escolhidos em regras formais que
+simulem o raciocínio humano durante a utilização do sistema.
+Implementação
+Fase responsável por utilizar dos conhecimentos e recursos coletados durante as fases
+anteriores para o desenvolvimento do sistema propriamente dito. Nesta fase, o engenheiro
+responsável algoritmizará as regras criadas que simulam o raciocínio de um profissional
+especialista no domínio da aplicação.
+Avaliação
+Fase responsável pela realização de testes para verificação da eficácia do sistema e
+identificação de possíveis bugs que o sistema pode apresentar para posterior reparo.
+Revisão
+Fase responsável por realizar o acompanhamento do sistema, isto é, observar o
+sistema continuamente para possíveis mudanças em alguns recursos notados durante a
+fase de teste e avaliação.
+Vantagens e desvantagens
++ Vantagens
+– Não é influenciado por emoções ou outras condições adversas;
+– Velocidade na classificação de problemas;
+– Redução de custos com funcionários;
+– Sem perdas no conhecimento adquirido ao longo do tempo;
+– Integração com outras ferramentas.
++ Desvantagens
+– Não conseguem classificar problemas mais genéricos;
+– Podem gerar insegurança com outros funcionários que atuam na mesma área
+de conhecimento do sistema;
+– Não possuem senso comum, podendo fornecer resultados que impactem negati-
+vamente alguém.
+Capítulo 2. Fundamentação Teórica 26
+2.4 Naive Bayes
+2.4.1 Explicação sobre o algoritmo
+O algoritmo Naive Bayes é uma técnica de classificação, baseado em probabilidades
+e inspirado no teorema de Bayes, utilizado para prever uma classe de um determinado
+conjunto de dados [ 21 ]. O teorema de bayes foi criado pelo matemático Thomas Bayes
+e descreve a probabilidade de um evento ocorrer baseado em um conhecimento a priori
+(probabilidade inicial de um evento ocorrer) que pode ter relação com o evento. O algo-
+ritmo tem como objetivo encontrar a probabilidade a posteriori de um evento, isto é, a
+probabilidade de um evento A ocorrer, dado que um evento B ocorreu, conforme é visto
+em 2.1.
+
+Onde:
+• P(A) é a probabilidade do evento A ocorrer (probabilidade a priori);
+• P(B) é a probabilidade do evento B ocorrer;
+• P ( A|B ) é a probabilidade do evento A ocorrer, dado que B ocorreu (probabilidade a
+posteriori);
+• P(B|A) é a probabilidade do evento B ocorrer, dado que A ocorreu.
+A palavra naive presente no nome do algoritmo significa ingênuo e foi dada por causa
+de uma peculiaridade que o mesmo possui. No algoritmo, todos os atributos analisados são
+tratados de forma independente, isso quer dizer que mesmo que alguns atributos de um
+problema tenham relação para sua ocorrência, eles não serão tratados dessa forma, por isso
+a origem do nome. Mesmo sendo um algoritmo relativamente simples de ser implementado,
+suas aplicações são as mais variadas e o mesmo consegue ter um bom desempenho onde é
+aplicado.
+2.4.2 Funcionamento do algoritmo
+O algoritmo Naive Bayes consiste em criar uma tabela de frequência (TF) baseado
+nas amostras de eventos disponíveis em sua base de conhecimentos, onde a mesma terá a
+quantidade de ocorrências desses eventos associados às suas causas. Em seguida o algoritmo
+utiliza a tabela para realizar operações matemáticas que resultarão ao fim do processo nas
+probabilidades de ocorrência de um novo evento apresentado.
+Capítulo 2. Fundamentação Teórica 27
+Durante o treinamento do algoritmo pode ocorrer casos em que falte dados na TF
+criada, quando isso acontece é utilizado um método conhecido por correção laplaciana. Este
+método consiste em modificar a tabela adicionando 1 registro na informação faltante, isso
+é feito porque o algoritmo utiliza os valores da tabela para realizar operações matemáticas
+que envolvem multiplicações e caso haja uma informação da amostra analisada com valor 0
+(zero), a probabilidade do evento ao qual essa amostra está associada também tenderá a 0
+(zero), impossibilitando dessa forma sua classificação. No entanto, ao adicionar informações
+inexistentes na tabela, o processo de classificação pode ser influenciado caso a base de
+dados utilizada seja pequena.
+2.4.3 Vantagens e desvantagens
+Vantagens
+- Fácil implementação;
+- Facilidade e velocidade em prever um novo conjunto de dados apresentados;
+- Necessário poucos exemplos no conjunto de treino para obter classificação com boa
+acurácia;
+- Quando há independência nos atributos, seu desempenho é superior a outros modelos
+de classificação.
+Desvantagens
+- Se o exemplo a ser classificado possuir uma característica que não foi observada
+durante o treinamento, o algoritmo atribuirá probabilidade zero à mesma e não será
+possível classificar o exemplo. Para esses casos, pode-se usar a correção laplaciana;
+- Quando há forte dependência nos atributos, o desempenho do algoritmo tende a ser
+menor.
+28
+3 Desenvolvimento do Trabalho
+Este capítulo descreve como o projeto foi desenvolvido, bem como as ferramentas e
+técnicas de classificação utilizadas. Na seção 3.1, descreve-se de forma geral a abordagem
+proposta, informando as técnicas utilizadas. Na seção 3.2, detalha-se as informações
+das ferramentas utilizadas e linguagem de programação, além dos recursos necessários
+para replicação da presente abordagem. Na seção 3.3, descreve-se o detalhamento do
+funcionamento do sistema, bem como suas etapas de execução.
+3.1 Breve Explicação sobre o Sistema
+O sistema foi desenvolvido baseando-se na teoria sobre SE, abordada na seção 2.2,
+e o tipo de SE criado é um baseado em casos, visto que o algoritmo utilizado usa amostras
+inteiras no processo de treinamento e classificação. O algoritmo escolhido para ser usado
+como classificador do sistema foi o Naive Bayes, algoritmo apresentado na seção 2.4, e
+sua escolha deve-se à velocidade ao tratar grandes volumes de dados e obtenção de bons
+resultados quando trabalha-se com bases pequenas, além de apresentar as respostas de
+classificação no formato de probabilidades para cada doença
+Esta última característica permite ao utilizador do sistema analisar de forma mais
+crítica se deve ou não aceitar a resposta final dada pelo sistema, isto é, ao fim de cada
+classificação o sistema apresentará as probabilidades de cada doença e dessa forma o
+usuário poderá decidir melhor caso os resultados para uma amostra sejam muito próximos.
+Um exemplo de resultado pode ser visto na Tabela 1.
+Tabela 1 – Exemplo de resultado apresentado ao usuário
+Doença Probabilidade
+Chikungunya 37.2%
+Dengue 40.3%
+Zika 22.5%
+O funcionamento do sistema está dividido basicamente em três fases: treinamento,
+execução e avaliação. Durante a fase de treinamento o sistema consulta a base de co-
+nhecimentos para criar uma TF que será utilizada em posteriores classificações. Na fase
+de execução o usuário interagirá com o sistema, informando os sintomas do paciente,
+previamente identificados pelo médico durante a entrevista, e solicitará que o mesmo
+execute a classificação para verificar qual doença pode ter contaminado o paciente. Na
+fase de avaliação o sistema informará ao usuário os resultados da classificação e solicitará
+Capítulo 3. Desenvolvimento do Trabalho 29
+que o mesmo informe se a avaliação está correta ou não. A Figura 1 demonstra de modo
+geral o funcionamento do sistema e a Figura 2 ilustra seu diagrama de casos de uso.
+Figura 1 – Fluxograma de arquitetura geral do sistema
+Fonte: Autoria própria (2018)
+Figura 2 – Diagrama de casos de uso do sistema
+Fonte: Autoria própria (2018)
+3.2 Ferramentas e Recursos Utilizados
+A linguagem de programação utilizada para desenvolvimento do projeto foi a Java,
+uma linguagem de programação orientada a objetos originalmente criada pela Sun e
+atualmente mantida pela Oracle. A linguagem Java foi criada inicialmente para aplicações
+desktop robustas, mas atualmente é utilizada para desenvolvimento web, desktop e mobile.
+Diferente de algumas linguagens, a mesma utiliza o conceito de máquina virtual, isto é,
+utiliza um ambiente que funciona como uma interface entre o SO utilizado e a aplicação
+desenvolvida.
+Além de muitas outras funcionalidades, essa interface é responsável por realizar
+a comunicação entre os dois pontos sem que haja a necessidade do usuário se preocupar
+em ter de desenvolver sua aplicação para cada SO disponível. A aplicação desenvolvida
+executa sem envolvimento algum do SO, apenas comunicando-se com a máquina virtual,
+que neste caso é a Java Virtual Machine (JVM), responsável por realizar essa comunicação
+entre ambas as partes. A figura 3 ilustra o processo de comunicação realizado entre uma
+aplicação Java e o SO utilizando uma máquina virtual. É importante ressaltar que para
+desenvolvimento de qualquer aplicação que utilize a linguagem Java é necessário ter
+instalado uma versão do Java Development Kit (JDK), responsável por rodar as aplicações
+durante a fase de desenvolvimento, em seu ambiente de trabalho.
+Capítulo 3. Desenvolvimento do Trabalho 31
+Figura 3 – Comunicação entre uma aplicação Java e um sistema operacional
+Fonte: Autoria própria (2018)
+Para que a aplicação rode em qualquer SO, é necessário que o mesmo tenha
+instalado uma versão da Java Runtime Environment (JRE), pacote de instalação que
+contém o ambiente de execução para aplicações Java, como a JVM e outras bibliotecas
+utilizadas. Este ambiente já vem instalado por padrão em dispositivos com o SO android.
+A IDE (Integrated Development Environment) utilizada para desenvolvimento do
+projeto foi o Android Studio, IDE criada pela Google para desenvolvimento de aplicativos
+do SO android.
+Para o banco de dados (BD), foi utilizado 2 serviços diferentes, um para armaze-
+namento do banco de forma online, dessa forma disponível para todos os usuários que
+utilizem o sistema em dispositivos diferentes, e outro para armazenamento offline para que
+não seja necessário estar conectado o tempo inteiro à internet ao realizar a classificação de
+novas amostras.
+Para o BD online foi utilizado o MySQL, um sistema de gerenciamento de banco
+de dados que utiliza a linguagem SQL (Structured Query Language) como interface e é
+usada para armazenamento de grandes quantidades de informações [ 22 ]. Enquanto que
+para o BD offline foi utilizado o SQLite, uma biblioteca em linguagem C que implementa
+um banco de dados SQL e que está presente nativamente em sistemas operacionais android
+[23].
+O banco MySQL é responsável por armazenar as informações referentes às amostras
+obtidas, enquanto que o SQLite é responsável por armazenar as informações das amostras
+recebidas do BD online, da TF após ela ser criada e das amostras que ficarem com avaliação
+pendente. As versões dos softwares utilizados estão listados a seguir:
+Capítulo 3. Desenvolvimento do Trabalho 32
++ Versões utilizadas:
+– Versão do Java (JDK): 8.0;
+– Versão da JRE: 8.0;
+– Versão do Android Studio: 3.0;
+– Versão mínima para execução da aplicação: Android 5.0.
+Também foi utilizado para fins de comparação de resultados entre algoritmos a
+biblioteca scikit-learn, uma biblioteca de aprendizado de máquina de código aberto para a
+linguagem de programação Python que inclui vários algoritmos de classificação, regressão
+e agrupamento [24].
+3.3 Detalhamento do Sistema
+3.3.1 Treinamento
+Inicialmente o sistema precisará ser treinado com uma base de conhecimentos
+previamente armazenada. Para este trabalho, que tem como objetivo a classificação de
+doenças transmitidas pelo mosquito Aedes Aegypti, o sistema possui três possíveis resultados
+finais, sendo eles: Chikungunya, Dengue e Zika. As Figuras 4 e 5 ilustram as modelagens
+dos bancos de dados online e offline, respectivamente, que o sistema utiliza.
+Figura 4 – Modelagem do banco de dados online do sistema
+Fonte: Autoria própria (2018)
+Capítulo 3. Desenvolvimento do Trabalho 33
+Figura 5 – Modelagem do banco de dados offline do sistema
+Fonte: Autoria própria (2018)
+Como já mencionado, o funcionamento do sistema divide-se em três fases: treina-
+mento, execução e avaliação. Na fase de treinamento, o algoritmo Naive Bayes consulta
+cada registro da base de conhecimentos e usa essas informações para criar uma TF, isto
+é, uma tabela que contém o número de ocorrências de cada doença associada a seus
+respectivos sintomas. Após criar a TF, o sistema armazena-a no banco de dados para usos
+posteriores. Um exemplo de TF criada por meio desse método por ser observado em 2.
+Tabela 2 – Exemplo de tabela de frequência criada contendo apenas 2 sintomas
+
+A primeira coluna da tabela destina-se ao número de ocorrências das doenças,
+enquanto que todas as outras destinam-se ao número de ocorrências dos sintomas identifi-
+cados de forma positiva (POS) ou negativa (NEG). É possível notar que a primeira linha
+da tabela possui uma função diferente das outras, a mesma tem como objetivo registrar
+a contagem total das doenças e sintomas identificados, isto é necessário porque alguns
+desses valores são utilizados no processo de classificação. Para este trabalho, a TF do
+sistema conta com as três doenças já mencionadas e 16 possíveis sintomas que alguém
+pode apresentar.
+Capítulo 3. Desenvolvimento do Trabalho 34
+3.3.2 Execução
+Após a criação da TF, o sistema segue para a fase de execução, onde o usuário
+poderá escolher classificar uma nova amostra. Ao escolher realizar uma nova classificação,
+o usuário será apresentado a uma tela onde estarão listados, em ordem alfabética, todos os
+possíveis sintomas relacionados às doenças registradas na base de conhecimentos. Dentre
+os sintomas apresentados, o usuário precisará escolher os sintomas que foram previamente
+identificados durante a consulta com o paciente. O formato de lista de sintomas foi adotado
+para melhor usabilidade do aplicativo, mas é possível também informar o sintoma de forma
+textual na barra de busca localizada no topo da tela, conforme pode ser visto na Figura 6.
+Figura 6 – Tela do sistema de seleção de sintomas
+Fonte: Autoria própria (2018)
+Após o usuário selecionar e confirmar todos os sintomas apresentados pelo paciente,
+o sistema iniciará o processo de classificação, onde ele consultará em sua TF o número de
+ocorrências de cada sintoma para gerar as probabilidades de ocorrência de cada doença.
+Capítulo 3. Desenvolvimento do Trabalho 35
+Para exemplificar esta etapa, suponha que o usuário indicou no sistema os sintomas “dor
+de cabeça”, “febre alta” e “náuseas”. Nesse momento, o algoritmo Naive Bayes consulta a
+TF para colher as informações referentes ao número de ocorrências positivas dos sintomas
+listados e negativas dos sintomas não-listados, e usa estes dados para realizar o cálculo
+demonstrado em 3.1.
+
+(3.1)
+Onde:
+- P(x) é a probabilidade da doença analisada, neste caso x;
+- X é o número de amostras, registradas na base de conhecimentos, da doença x;
+- T é o número total de amostras registradas na base de conhecimentos;
+- A é o número de ocorrências positivas do sintoma “dor de cabeça” relacionado à
+doença x;
+- B é o número de ocorrências positivas do sintoma “febre alta” relacionado à doença
+x;
+- C é o número de ocorrências positivas do sintoma “náuseas” relacionado à doença x ;
+- N i , com i variando de 1 à n , são os números de ocorrências negativas, relacionados à
+doença x, de cada sintoma não informado na etapa de seleção de sintomas;
+Dessa forma o algoritmo consegue obter a probabilidade de ocorrência para uma
+doença, em seguida esse processo é repetido para todas as doenças registradas no sistema.
+3.3.3 Avaliação
+Ao fim do processo de classificação, o sistema apresentará ao usuário uma tela
+informando a probabilidade de cada doença que o paciente pode ter contraído realçando
+a doença “vencedora”, isto é, a que possui maior probabilidade dentre elas. A tela em
+questão pode ser visualizada na Figura 7.
+Na mesma tela o usuário terá a oportunidade de avaliar a classificação realizada
+pelo sistema, onde é possível informar se o resultado está correto (ou ajudou a sanar as
+possíveis dúvidas) ou incorreto. No caso de classificação incorreta, o sistema avançará para
+mais uma etapa, onde será perguntado ao usuário qual doença seria a correta dentre as
+que o sistema possui em sua base de conhecimentos.
+Capítulo 3. Desenvolvimento do Trabalho 36
+Figura 7 – Tela de resultados da classificação
+Fonte: Autoria própria (2018)
+Se o usuário não optar por avaliar o resultado, a amostra será armazenada em uma
+base de conhecimentos provisória e poderá ser consultada depois para que a avaliação
+final seja feita, conforme pode ser visto na Figura 8. Todas as avaliações finais, sejam
+elas positivas ou negativas, serão adicionadas à base de conhecimentos do sistema para
+serem utilizadas em futuras classificações, permitindo dessa forma que o sistema tenha
+uma retroalimentação, assim como outros sistemas baseados em IA.
+Capítulo 3. Desenvolvimento do Trabalho 37
+Figura 8 – Tela de amostras com avaliação pendente
+Fonte: Autoria própria (2018)
+38
+4 Resultados
+Este capítulo descreve o processo de aquisição da base de conhecimentos utilizada
+para treinamento e testes e os resultados obtidos durante o desenvolvimento do projeto.
+4.1 Aquisição de Amostras
+Durante o período de 29 de Junho de 2018 à 09 de Julho de 2018 foram realizadas
+as aquisições de amostras para a base de conhecimentos que seria utilizada no sistema
+proposto. Essa aquisição foi feita por meio da coleta de informações, que foram fornecidas
+por voluntários, por meio de um formulário online criado utilizando o serviço do Google,
+onde cada voluntário respondu 9 perguntas no total, sendo 3 para cada doença estudada
+(Chikungunya, Dengue e Zika).
+Além das perguntas sobre ocorrência de alguma das doenças estudadas, os volun-
+tários inicialmente respondiam de forma opcional o nome, sexo e região onde residiam.
+As perguntas foram elaboradas a partir de uma pesquisa sobre doenças transmitidas pelo
+mosquito Aedes Aegypti [ 25 ], e foram dispostas da seguinte forma para facilitar na coleta
+de dados.
+- Perguntas:
+1. Você já teve esta Doença?
+2. Quais sintomas você apresentou enquanto esteve doente?
+3. Por quanto tempo você apresentou os sintomas informados?
+Na pergunta de número 2 dispôs-se um total de 16 sintomas diferentes que poderiam
+ser marcados pelo voluntário, sendo eles: coceira na pele, dores abdominais, dor de cabeça,
+dor na garganta, dor nas articulações, dor nos olhos, dor nos músculos, fraqueza, febre
+baixa (37 o à 38 o ), febre alta (39 o à 40 o ), icterícia, inchaço no corpo, manchas vermelhas,
+náuseas, vermelhidão nos olhos e vômito.
+Ao todo, 41 pessoas responderam o formulário e essas informações foram modeladas
+e inseridas, de maneira manual, no banco de dados utilizado no sistema. Na Figura 9
+é possível ver como os dados ficaram organizados após a coleta das informações dos
+voluntários.
+Capítulo 4. Resultados 39
+Figura 9 – Dados coletados por voluntários
+Fonte: Autoria própria (2018)
+4.2 Testes e Resultados
+Das 41 amostras coletadas, separou-se 32 para treinamento do algoritmo de classi-
+ficação e 9 para fins de teste. Utilizando o algoritmo Naive Bayes, o sistema conseguiu
+acertar 6 das 9 amostras durante os testes realizados, ou seja, atingiu 66,6% de acurácia,
+o que pode ser considerado uma taxa de sucesso razoável dada a pouca quantidade de
+amostras utilizadas para treinamento do algoritmo. Também foram realizados testes com
+outros algoritmos para fins de análise e comparação com a abordagem utilizada neste
+trabalho.
+Utilizando o algoritmo de indução baseado em regras, o sistema acertou apenas 4
+das 9 amostras utilizadas (44,4% de acurácia) para teste, enquanto que o algoritmo de
+árvore de decisão acertou 5 das 9 amostras (55,5% de acurácia). É importante ressaltar
+que o algoritmo de árvore de decisão utilizado no teste foi o da biblioteca scikit-learn,
+presente na linguagem de programação Python, o que demostra que mesmo bibliotecas
+consolidadas não conseguem obter um resultado satisfatório, em comparação ao Naive
+Bayes, quando trabalhando-se com poucos dados.
+Na Tabela 3 é possível ver os resultados das amostras selecionadas para teste,
+utilizando o algoritmo Naive Bayes, junto às suas respectivas classificações. Enquanto que
+nas Tabelas 4 e 5 observa-se os resultados das classificações utilizando os algoritmos de
+Capítulo 4. Resultados 40
+indução baseado em regras e árvore de decisão, respectivamente.
+Tabela 3 – Resultados obtidos usando o algoritmo Naive Bayes
+
+Tabela 4 – Resultados obtidos usando o algoritmo de indução baseado em regras
+
+Tabela 5 – Resultados obtidos usando o algoritmo de árvore de decisão
+
+É possível perceber observando a Tabela 3 que algumas das amostras classificadas
+incorretamente pelo sistema possuem probabilidades com valores próximos uns dos outros,
+o que dá margem para o usuário decidir se quer aceitar a resposta fornecida pelo sistema
+ou não, no fim a decisão final sempre será a do usuário.
+Capítulo 4. Resultados 41
+Quanto ao tempo de execução do sistema nos dispositivos móveis, a média ficou
+entre 4 à 6 segundos durante a fase de treinamento e 2 à 3 segundos durante a fase de
+classificação executando o sistema em um dispositivo com as especificações descritas na
+seção 3.2, e usando uma base com 32 amostras. Considerando que a fase de treinamento será
+executada apenas 1 vez por dia, sendo ela feita antes do primeiro paciente ser consultado
+neste dia, chega-se a conclusão que o tempo é considerado satisfatório.
+42
+5 Conclusão
+Este trabalho de conclusão de curso apresentou uma nova abordagem no que se
+refere ao uso de sistemas especialistas, trazendo esse recurso de uma forma mais conveniente
+e acessível para os padrões atuais. Um recurso poderoso que estará disponível na palma
+da mão de um profissional recém-graduado ou mesmo os que estão atuando em seu ofício
+por anos.
+Também foi demonstrado que um sistema desse tipo pode ajudar, na maioria dos
+casos, a atender pacientes de forma eficiente mesmo possuindo uma base de conhecimentos
+pequena e que seu poder de classificação pode aumentar progressivamente a medida que
+mais amostras são fornecidas.
+De maneira geral, o sistema apresentou resultados satisfatórios dada a base de
+conhecimentos que o mesmo possuía, e que suas aplicações podem estender-se por outras
+áreas, sendo elas áreas da saúde com outro escopo de atuação ou áreas completamente
+diferentes, como análise de crédito em empresas bancárias. Como o sistema depende
+unicamente de uma base de conhecimentos para seu funcionamento, ao mudar o domínio
+da base, muda-se também o escopo de atuação, sendo feitas modificações mínimas no
+produto final (como interface com o usuário).
+Por fim, é importante ressaltar que apesar da autonomia do sistema, recomenda-
+se sempre a existência de um mediador utilizando-o, pois o uso incorreto por parte de
+um usuário inexperiente pode causar diversos problemas. Para este trabalho, o sistema
+desenvolvido foi criado visando a utilização por meio de um profissional certificado na área
+de saúde, caso um usuário não certificado utilizasse o sistema por conta própria, o mesmo
+poderia realizar ações problemáticas, como automedicação.
+43
+6 Trabalhos Futuros
+Como já descrito anteriormente, o trabalho apresentado possui inúmeras possi-
+bilidades de aplicação, tendo apenas como requisito para sua replicação uma base de
+conhecimentos que possa ser utilizada pelo sistema e um especialista na área de atuação
+que possa auxiliar em seu desenvolvimento.
+Para os trabalhos futuros, pode-se realizar as seguintes ações:
+- Aperfeiçoar o classificador do sistema: Apesar de satisfatório, o classificador utilizado
+é bastante simples e pode ser substituído por classificadores mais complexos que
+forneçam melhor acurácia e desempenho;
+- Integração com prontuários médicos: É possível a integração com sistemas digitais
+de prontuários médicos para obtenção de melhores resultados nas classificações,
+partindo da premissa que alguns resultados podem variar de acordo com o histórico
+médico do paciente;
+- Estender as áreas de aplicação do sistema: Dados os resultados promissores obtidos
+neste trabalho, as aplicações para esse sistema podem ser estendidas para outras
+áreas de atuação, como diagnóstico de outros tipos de doenças.
